@@ -34,11 +34,27 @@ app.get("/login",function(req,res){
 io.sockets.on('connection',function(socket){
 
     socket.on('sender message',function(data){
-
         io.sockets.emit('server message',data);
 
     });
 
+   socket.on('new user',function(user){
+     console.log("socket user on method");
+        users.push(user);
+        console.log(users);
+
+    if(users.indexOf(user) > -1){
+         io.sockets.emit('user exist',user);
+         console.log("user is not exist");
+
+    }else{
+         io.sockets.emit('user exist',false);
+         console.log("user is  exist");
+    }
+
+    });
 
 
 });
+
+

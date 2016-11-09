@@ -1,5 +1,4 @@
 <html>
-
 <head>
 	<title>Please Enter your user name</title>
 	<!-- Latest compiled and minified CSS -->
@@ -15,6 +14,7 @@
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
 		crossorigin="anonymous"></script>
 		<script src="/assets/username_validation.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
 	
 </head>
 
@@ -23,8 +23,9 @@
 		<div class="form-group">
 			<label for="username">Username</label>
 			<input type="text" class="form-control" id="username" placeholder="Username">
+			<label id="userNameError" class="text-error"></label>
 		</div>
-		<button type="submit" class="btn btn-default">Login</button>
+		<button type="submit" class="btn btn-success">Login</button>
 	</form>
 </body>
 
