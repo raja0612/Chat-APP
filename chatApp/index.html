@@ -24,20 +24,41 @@
 
 
 <body>
-	<div class="container-fluid">
-		<div class="panel panel-default">
-			<div class="panel-body">
-				<p id="chatArea" class="text-info"></p>
-			</div>
-			<div class="panel-footer">
-				<form id="chatForm">
+	<div id="userDiv">
+		<form id="usernameForm">
+			<div class="row">
+				<div class="col-md-3">
 					<div class="form-group">
-						<input type="text" class="form-control" id="chatText">
+						<label for="username">Username</label>
+						<input type="text" class="form-control" id="username" placeholder="Username">
+						<label id="userNameError" class="text-warning"></label>
 					</div>
-					<button type="submit" class="btn btn-success">Send</button>
-				</form>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-success">Login</button>
+		</form>
+	</div>
+
+	<div id="chatDiv">
+		<div id="chatWrap">
+			<div class="container-fluid">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<p id="chatArea" class="text-info"></p>
+					</div>
+					<div class="panel-footer">
+						<form id="chatForm">
+							<div class="form-group">
+								<input type="text" class="form-control" id="chatText">
+							</div>
+							<button type="submit" class="btn btn-success">Send</button>
+						</form>
+					</div>
+				</div>
 			</div>
 		</div>
+        <b> Currently users on Chat:</b>
+		<div id="users"></div>
 	</div>
 </body>
 
